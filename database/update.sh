@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
-if [ "$2" != 'all' ]; then
+if [ "$2" == 'all' ]; then
   read -p "Are you sure you want to override production database? " -n 1 -r
   echo    # (optional) move to a new line
   if [[ ! $REPLY =~ ^[Yy]$ ]]; then
@@ -25,7 +25,7 @@ docker run -it --rm \
   --link kage_db_development_1:postgres postgres \
   psql -h postgres -U postgres -v schema_directory="/src/schema" -a -f /src/schema/main.sql
 
-if [ "$2" != 'all' ]; then
+if [ "$2" == 'all' ]; then
   docker run -it --rm \
     -v $DIR/schema:/src/schema \
     -e PGPASSWORD=testtest \

@@ -14,6 +14,8 @@ CREATE EXTENSION "uuid-ossp";
 
 BEGIN;
 \i users.sql
+\i patient_var.sql
+\i patient_outcomes.sql
 \i redis.sql
 \i notifications.sql
 \i seed.sql

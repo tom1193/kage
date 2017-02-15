@@ -3,6 +3,7 @@
 // Set default node environment to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
+//import Node modules
 var express = require('express'),
   config = require('./config/environment'),
   pg = require('pg');

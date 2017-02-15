@@ -9,6 +9,7 @@ module.exports = function (app) {
   // Insert routes below
   app.use('/core/v1.0.0/api/users', require('./api/user'));
   app.use('/core/v1.0.0/auth', require('./auth'));
+  app.use('/core/v1.0.0/api/patient', require('./api/patient'));
 
   app.route('/core/v1.0.0').get(function (req, res) {
     return res.json({

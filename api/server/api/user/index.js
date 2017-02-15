@@ -1,5 +1,5 @@
 'use strict';
-
+//import methods from controller and auth.service
 var express = require('express'),
   controller = require('./user.controller'),
   config = require('../../config/environment'),
